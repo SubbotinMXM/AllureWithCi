@@ -17,19 +17,20 @@ dependencies {
     testImplementation ('io.qameta.allure:allure-selenide:2.21.0')
 }
 
-//allure{
-//    report{
-//        version.set("2.19.0")
-//    }
-//    adapter{
-//        aspectjWeaver.set(true)
-//        frameworks{
-//            junit5{
-//                adapterVersion.set("2.19.0")
-//            }
-//        }
-//    }
-//}
+// Как будто необязательная часть, без нее тоже работает, как Олег показывал. Но в обучении от QA GURU этот блок есть
+allure{
+    report{
+        version.set("2.19.0")
+    }
+    adapter{
+        aspectjWeaver.set(true)
+        frameworks{
+            junit5{
+                adapterVersion.set("2.19.0")
+            }
+        }
+    }
+}
 
 test {
     useJUnitPlatform()
